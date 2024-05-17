@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Página 1{% endblock %}
+
+{% block content %}
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../static/imagens/cat and dog.jpg" class="d-block w-300 img-carousel" alt="cat and dog">
+        </div>
+        <div class="carousel-item">
+            <img src="../static/imagens/cat.jpg" class="d-block w-300 img-carousel" alt="cat">
+        </div>
+        <div class="carousel-item">
+            <img src="../static/imagens/dog.jpg" class="d-block w-300 img-carousel" alt="dog">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<style>
+    .img-carousel {
+        width: auto !important;
+        height: 300px !important; /* Defina a altura desejada para todas as imagens do carrossel */
+        margin: auto !important;
+    }
+</style>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 col-11 ms-auto">
+    <div class="col">
+      <div class="card">
+        <img src="../static/imagens/passeio.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Passeio</h5>
+          <p class="card-text">Oferecemos um serviço de passeios para o seu pet, proporcionando oportunidades para brincar ao ar livre e interagir com outros animais.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="../static/imagens/brincando_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Brincar com o pet</h5>
+          <p class="card-text">É muito importante interagir e brincar com seu pet para ajudar a reduzir o estresse dele.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="../static/imagens/comendo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Alimentaçao</h5>
+          <p class="card-text">Nós oferecemos a ração, para o seu pet, da sua preferencia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    body {
+        background-image: url('stc');
+        background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+        background-repeat: no-repeat; /* Evita repetir a imagem */
+    }
+</style>
+{% endblock %}
+

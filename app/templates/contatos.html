@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Página 3{% endblock %}
+
+{% block content %}
+
+<div class="formulario">
+     <h2><b>Entre em contato</b></h2>
+     
+     <form action="{{ url_for('add_contato') }}" method="POST">
+         <label for="email"  >Seu email:</label>
+         <input type="email" id="campo" name="email">
+         <label for="assunto">Assunto:</label>
+         <input type="text" id="campo" name="assunto">
+         <label for="email">Descrição:</label>
+         <input type="text" id="campo2" name="descricao">
+
+         <input type="submit" value="Enviar"></input>
+
+     </form>
+
+     <ul>
+        {% for pessoa in contato %}
+        <li>{{ pessoa[0] }} {{ pessoa[1] }} {{ pessoa[2] }} {{ pessoa[3] }}</li>
+        {% endfor %}
+    </ul>
+
+ </div>
+
+{% endblock %}
